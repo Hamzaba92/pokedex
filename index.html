@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./symbols/pokemon_disc_drawn.png" />
+  <link rel="stylesheet" href="./css/reset_stylesheet.css" />
+  <link rel="stylesheet" href="./css/fonts.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./javascript/data.js" defer></script>
+  <script src="./javascript/templates.js" defer></script>
+  <script src="./javascript/auxiliary_functions.js" defer></script>
+  <script src="./javascript/script.js" defer></script>
+  <script src="./javascript/pokemon_details.js" defer></script>
+</head>
+
+<body onload="init()">
+  <header class="background-radial-gradient">
+    <div class="header">
+      <svg viewBox="0 0 500 170">
+        <path id="curve" fill="transparent" d="M73.2,160c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
+        <text width="500">
+          <textPath class="curved-text" fill="#f7c82f" stroke="#333098" stroke-width="3" font-weight="bold"
+            alignment-baseline="top" xlink:href="#curve">
+            Pokedex
+          </textPath>
+        </text>
+        <image class="pokemon-in-logo" xlink:href="./img/mewtow.png" width="96" x="200" y="68" />
+      </svg>
+      <div class="search-wrapper">
+        <div class="pokemon-cartoon">
+          <img src="./img/pickachu1.png" />
+          <img src="./img/raitchu1.png">
+          <img src="./img/bisasam.png">
+          <img src="./img/glumander.png">
+        </div>
+        <form class="search-form" action="">
+          <input id="search_input" class="search-input" type="text" onkeyup="searchPokemon()"
+            placeholder="Search for Pokémon" />
+          <button onclick="clearSearchBox()" class="clear-search-button" type="reset">
+            <img src="./symbols/x_icon.svg" />
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <div id="page">
+    <div id="pokemon_details_background" class="pokemon-details-background d-none"></div>
+    <main id="pokemon_gallery"></main>
+    <div id="loading_spinner" class="loading-spinner background-radial-gradient">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  <footer class="background-radial-gradient">
+    <div id="more_button_section" class="more-pokemons-button-wrapper"></div>
+    <div class="footer">
+      <p>© Hamza Bajramoski 2023</p>
+    </div>
+  </footer>
+  <div id="bottom"></div>
+</body>
+
+</html>
