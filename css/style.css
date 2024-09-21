@@ -98,23 +98,25 @@ svg {
   padding: 2px;
   position: relative;
   display: block;
-  border: var(--margin-color) 1px solid;
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: white;
 }
 
 .search-input {
   width: 100%;
-  padding: 6px 0 6px 32px;
-  border: none;
+  padding: 6px 0 6px 42px;
   background-color: transparent;
   background-image: url(../symbols/magnifying_glass.svg);
   background-repeat: no-repeat;
-  background-size: 28px;
+  background-position: left;
+  background-position: 10px center;
+  background-size: 22px;
+  border: none;
 }
 
 .search-input:focus {
-  outline-color: var(--accent-color-purple);
+  outline: none;
+  
 }
 
 .clear-search-button {
